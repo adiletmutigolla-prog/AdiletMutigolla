@@ -15,9 +15,6 @@ class CourseMerger:
         # 1. Справочниктегі (courses) дубликаттарды жою (10-аптаның логикасы)
         courses_cleaned = self.courses.drop_duplicates(subset=['course_code'])
 
-        # 2. МЕРДЖ (Біріктіру)
-        # on='course_code' — ортақ баған
-        # how='inner' — екі файлда да бар кодтарды ғана қалдыру
         merged_df = pd.merge(self.enroll, courses_cleaned, on='course_code', how='inner')
 
         return merged_df
