@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 class CourseAnalytics:
     def __init__(self, enroll_path, courses_path):
         self.enroll = pd.read_csv(enroll_path, skipinitialspace=True)
