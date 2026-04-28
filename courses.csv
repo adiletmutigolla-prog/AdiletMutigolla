@@ -1,4 +1,9 @@
-"course_code,title"
-"CS101,Programming Technologies"
-"MATH202,Calculus"
-"MATH202,Calculus"
+course_code,title
+CS101,Python Programming
+MATH202,Calculus
+PHYS303,General Physics
+PYTHON1,Advanced Python
+DB202,Database Systems
+AI404,Artificial Intelligence
+ENG101,Academic English
+CS101,Python Programming
