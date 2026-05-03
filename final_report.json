@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Python Programming",
+        "student_id": 4
+    },
+    {
+        "title": "Database Systems",
+        "student_id": 3
+    },
+    {
+        "title": "Advanced Python",
+        "student_id": 2
+    },
+    {
+        "title": "Calculus",
+        "student_id": 2
+    },
+    {
+        "title": "Artificial Intelligence",
+        "student_id": 2
+    },
+    {
+        "title": "Academic English",
+        "student_id": 1
+    },
+    {
+        "title": "General Physics",
+        "student_id": 1
+    }
+]
