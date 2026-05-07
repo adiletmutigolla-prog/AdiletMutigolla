@@ -7,9 +7,9 @@ from CourseVisualizer import CourseVisualizer
 
 if __name__ == "__main__":
     try:
-        print("=" * 40)
-        print("  КУРС ЖОБАСЫ: ДЕРЕКТЕРДІ ТАЛДАУ  ")
-        print("=" * 40)
+        print("-" * 40)
+        print("  ДЕРЕКТЕРДІ ТАЛДАУ  ")
+        print("-" * 40)
 
         # --- 9-апта: Кодтардың қиылысуы ---
         task9 = CourseIntersection('enroll.csv', 'courses.csv')
@@ -18,7 +18,6 @@ if __name__ == "__main__":
 
         # --- 10-апта: Справочникті тазарту ---
         task10 = CourseManager('enroll.csv', 'courses.csv')
-        # Ескерту: Файлыңдағы функция аты process_data екеніне көз жеткіз
         cleaned_df = task10.process_data()
         print(f"\n[10-апта] Справочник тазартылды. Жазба саны: {len(cleaned_df)}")
 
@@ -41,7 +40,6 @@ if __name__ == "__main__":
 
         # --- 14-апта: JSON форматына экспорттау (Қорытынды) ---
         print("\n[14-апта] Деректерді JSON форматына айналдыру...")
-        # DataFrame-ді сөздікке айналдырып, JSON ретінде шығарамыз
         json_data = analytics_result.to_json(orient='records', force_ascii=False)
         formatted_json = json.dumps(json.loads(json_data), indent=4, ensure_ascii=False)
 

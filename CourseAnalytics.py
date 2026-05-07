@@ -11,14 +11,10 @@ class CourseAnalytics:
         courses_cleaned = self.courses.drop_duplicates(subset=['course_code'])
         merged_df = pd.merge(self.enroll, courses_cleaned, on='course_code')
 
-        # 3. Группалау және уникалды студенттерді санау (12-апта)
-        # nunique() — қайталанбайтын student_id-лерді санайды
         result = merged_df.groupby('title')['student_id'].nunique().reset_index()
 
-        # Студент саны бойынша кему ретімен сұрыптаймыз (ең көп студенті бар курс жоғарыда)
         result = result.sort_values(by='student_id', ascending=False)
 
-        # 4. Нәтижені CSV файлына сақтау
         result.to_csv('top_courses.csv', index=False)
 
         return result
