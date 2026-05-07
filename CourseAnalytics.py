@@ -2,10 +2,8 @@ import pandas as pd
 
 class CourseAnalytics:
     def __init__(self, enroll_path, courses_path):
-        self.enroll = pd.read_csv(enroll_path, skipinitialspace=True)
-        self.courses = pd.read_csv(courses_path, skipinitialspace=True)
-        self.enroll.columns = self.enroll.columns.str.strip()
-        self.courses.columns = self.courses.columns.str.strip()
+        self.enroll = pd.read_csv(enroll_path)
+        self.courses = pd.read_csv(courses_path)
 
     def get_top_courses(self):
         courses_cleaned = self.courses.drop_duplicates(subset=['course_code'])
