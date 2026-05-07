@@ -13,7 +13,7 @@ class CourseVisualizer:
 
         plt.figure(figsize=(10, 6))
 
-        bars = plt.barh(top_7['title'], top_7['student_id'], color='orchid')
+        bars = plt.barh(top_7['title'], top_7['student_id'], color='green')
 
         plt.xlabel('Студенттер саны')
         plt.ylabel('Курс атауы')
