@@ -19,9 +19,6 @@ class CourseVisualizer:
         plt.ylabel('Курс атауы')
         plt.title('Ең танымал 7 курс')
 
-        for bar in bars:
-            plt.text(bar.get_width(), bar.get_y() + bar.get_height() / 2,
-                     f' {int(bar.get_width())}', va='center')
 
         plt.tight_layout()
 
