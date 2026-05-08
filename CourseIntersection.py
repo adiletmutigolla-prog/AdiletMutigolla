@@ -19,5 +19,3 @@ if __name__ == "__main__":
         print(result)
     except KeyError:
         print("Қате: 'course_code' бағаны табылмады. CSV файлдарын тексеріңіз.")
-    except Exception as e:
-        print(f"Күтпеген қате: {e}")
