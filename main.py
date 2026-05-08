@@ -11,7 +11,7 @@ if __name__ == "__main__":
         print("  ДЕРЕКТЕРДІ ТАЛДАУ  ")
         print("-" * 40)
 
-        # --- 9-апта: Кодтардың қиылысуы ---
+# --- 9-апта: Кодтардың қиылысуы ---
         task9 = CourseIntersection('enroll.csv', 'courses.csv')
         result9 = task9.get_intersection()
         print(f"\n[9-апта] Ортақ кодтар тізімі:\n{result9}")

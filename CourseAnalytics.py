@@ -10,7 +10,7 @@ class CourseAnalytics:
         merged_df = pd.merge(self.enroll, courses_cleaned, on='course_code')
 
         result = merged_df.groupby('title')['student_id'].nunique().reset_index()
-        result = result.sort_values(by='student_id', ascending=False)
+        result = result.sort_values('student_id', ascending=False)
         result.to_csv('top_courses.csv', index=False)
 
         return result
