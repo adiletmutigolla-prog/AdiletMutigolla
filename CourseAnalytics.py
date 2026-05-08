@@ -9,9 +9,9 @@ class CourseAnalytics:
         courses_cleaned = self.courses.drop_duplicates(subset=['course_code'])
         merged_df = pd.merge(self.enroll, courses_cleaned, on='course_code')
 
-        result = merged_df.groupby('title')['student_id'].nunique().reset_index()
+        result = merged_df.groupby('title')['student_id'].count().reset_index()
         result = result.sort_values('student_id', ascending=False)
-        result.to_csv('top_courses.csv', index=False)
+        result.to_csv('top_courses.csv')
 
         return result
 
